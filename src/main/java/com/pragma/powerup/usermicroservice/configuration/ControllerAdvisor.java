@@ -87,4 +87,11 @@ public class ControllerAdvisor {
         return ResponseEntity.status(HttpStatus.CONFLICT)
                 .body(Collections.singletonMap(Constanst.RESPONSE_ERROR_MESSAGE_KEY, Constanst.IDENTIFICATION_ALREADY_EXISTS_MESSAGE));
     }
+
+    @ExceptionHandler(AgeUserAllowedForCreation.class)
+    public ResponseEntity<Map<String, String>> handleAgeUserAllowedForCreationExceptio(
+            AgeUserAllowedForCreation ageUserAllowedForCreation) {
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                .body(Collections.singletonMap(Constanst.RESPONSE_ERROR_MESSAGE_KEY, "user must be over 18 years old"));
+    }
 }

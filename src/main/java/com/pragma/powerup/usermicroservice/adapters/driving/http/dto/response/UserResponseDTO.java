@@ -2,6 +2,10 @@ package com.pragma.powerup.usermicroservice.adapters.driving.http.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+
 
 @AllArgsConstructor
 @Getter
@@ -13,5 +17,5 @@ public class UserResponseDTO {
     private String birthdate;
     private String email;
     private String password;
-    private RoleResponseDTO role;
+    private Long idRole;
 }

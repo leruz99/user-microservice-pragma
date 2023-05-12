@@ -4,6 +4,7 @@ import com.pragma.powerup.usermicroservice.adapters.driving.http.dto.request.Use
 import com.pragma.powerup.usermicroservice.adapters.driving.http.dto.response.UserResponseDTO;
 import com.pragma.powerup.usermicroservice.adapters.driving.http.handlers.IUserHandler;
 import com.pragma.powerup.usermicroservice.adapters.driving.http.mapper.IUserRequestMapper;
+import com.pragma.powerup.usermicroservice.adapters.driving.http.mapper.IUserRespondeMapper;
 import com.pragma.powerup.usermicroservice.domain.api.IUserServicePort;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +13,13 @@ import org.springframework.stereotype.Service;
 public class UserHandlerImpl implements IUserHandler {
     private final IUserServicePort userServicePort;
     private final IUserRequestMapper userRequestMapper;
+    private final IUserRespondeMapper userRespondeMapper;
 
 
-    public UserHandlerImpl(IUserServicePort userServicePort, IUserRequestMapper userRequestMapper) {
+    public UserHandlerImpl(IUserServicePort userServicePort, IUserRequestMapper userRequestMapper, IUserRespondeMapper userRespondeMapper) {
         this.userServicePort = userServicePort;
         this.userRequestMapper = userRequestMapper;
+        this.userRespondeMapper = userRespondeMapper;
     }
 
 
@@ -28,6 +31,6 @@ public class UserHandlerImpl implements IUserHandler {
 
     @Override
     public UserResponseDTO getUser(Long id) {
-        return userRequestMapper.toUserResponseDTO(userServicePort.getUser(id));
+        return userRespondeMapper.toResponse(userServicePort.getUser(id));
     }
 }
