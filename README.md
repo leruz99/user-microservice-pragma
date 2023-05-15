@@ -41,7 +41,8 @@ To get a local copy up and running follow these steps.
 1. Clone the repository
 2. Change directory
    ```sh
-   cd power-up-arquetipo-v3
+   cd user-microservice
+   git clone + url del repositorio 
    ```
 3. Create a new database in MySQL called powerup
 4. Update the database connection settings
