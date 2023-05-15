@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-<h3 align="center">PRAGMA POWER-UP</h3>
+<h3 align="center">USER-MICROSERVICE</h3>
   <p align="center">En este microservicio se encuantra la primera historia de usuario que tiene los siguientes criterios de aceptacion</p>
   <ol start="numero"> ... </ol>
   <ol start="1">
@@ -11,7 +11,6 @@
   <li>el usuario quedara con el rol propietario</li>
   <li>El usuario debe ser mayor de edad</li>
 </ol>
-  </p>
 </div>
 
 ### Built With
