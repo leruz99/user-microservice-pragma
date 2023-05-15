@@ -5,13 +5,19 @@
 <h3 align="center">PRAGMA POWER-UP</h3>
   <p align="center">
     En este microservicio se encuantra la primera historia de usuario que tiene los siguientes criterios de aceptacion
+  </p>
     <ol>
-  <li>1. Al crear una cuenta, se deben solicitar los siguientes campos obligatorios:
-Nombre, Apellido, DocumentoDeIdentidad, celular, fechaNacimiento, correo y clave(encriptada con bcrypt)</li>
-  <li>Se debe verificar estructura de email válida, el teléfono debe contener un máximo de 13 caracteres y puede contener el símbolo +. Ejemplo: +573005698325, El documento de identidad debe ser únicamente numérico.</li>
-  ...
-  <li>el usuario quedara con el rol propietario.</li>
-      <li>El usuario debe ser mayor de edad"</li>
+  <li>Elemento 1</li>
+  <li>Elemento 2</li>
+  <li>Elemento 3</li>
+  <li>Elemento 4</li>
+</ol>
+   
+  <ol>
+  <li>Al crear una cuenta, se deben solicitar los siguientes campos obligatorios: Nombre, Apellido, DocumentoDeIdentidad, celular, fechaNacimiento, correo y clave(encriptada con bcrypt)</li>
+  <li>Se debe verificar estructura de email válida, el teléfono debe contener un máximo de 13 caracteres y puede contener el símbolo +. Ejemplo: +573005698325, El documento de identidad debe ser únicamente numérico</li>
+  <li>el usuario quedara con el rol propietario</li>
+  <li>El usuario debe ser mayor de edad</li>
 </ol>
   </p>
 </div>
