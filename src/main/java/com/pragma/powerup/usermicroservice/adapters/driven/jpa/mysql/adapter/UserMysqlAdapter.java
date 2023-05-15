@@ -3,6 +3,7 @@ package com.pragma.powerup.usermicroservice.adapters.driven.jpa.mysql.adapter;
 import com.pragma.powerup.usermicroservice.adapters.driven.jpa.mysql.entity.UserEntity;
 import com.pragma.powerup.usermicroservice.adapters.driven.jpa.mysql.exceptions.IdentificationAlreadyExistException;
 import com.pragma.powerup.usermicroservice.adapters.driven.jpa.mysql.exceptions.MailAlredyExistException;
+import com.pragma.powerup.usermicroservice.adapters.driven.jpa.mysql.exceptions.UserNotFoundException;
 import com.pragma.powerup.usermicroservice.adapters.driven.jpa.mysql.mapper.IUserEntityMapper;
 import com.pragma.powerup.usermicroservice.adapters.driven.jpa.mysql.repositories.IUserRepositoty;
 import com.pragma.powerup.usermicroservice.domain.model.User;
@@ -39,7 +40,12 @@ public class UserMysqlAdapter implements IUserPersistencePort {
     @Override
     public User getUser(Long id) {
         Optional<UserEntity> userEntity = userRepositoty.findById(id);
-        return userEntityMapper.toUser(userEntity.get());
+        if (userEntity.isPresent()){
+            return userEntityMapper.toUser(userEntity.get());
+        }else {
+            throw  new UserNotFoundException();
+        }
+
     }
 
 
