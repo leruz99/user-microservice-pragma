@@ -4,6 +4,7 @@
 <div align="center">
 <h3 align="center">USER-MICROSERVICE</h3>
   <p align="center">En este microservicio se encuantra la primera historia de usuario que tiene los siguientes criterios de aceptacion</p>
+</div>
   <ol start="numero"> ... </ol>
   <ol start="1">
   <li>Al crear una cuenta, se deben solicitar los siguientes campos obligatorios: Nombre, Apellido, DocumentoDeIdentidad, celular, fechaNacimiento, correo y clave(encriptada con bcrypt)</li>
@@ -11,7 +12,6 @@
   <li>el usuario quedara con el rol propietario</li>
   <li>El usuario debe ser mayor de edad</li>
 </ol>
-</div>
 
 ### Built With
 
