@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-<h3 align="center">USER-MICROSERVICE</h3>
+<h3>USER-MICROSERVICE</h3>
   <p align="center">En este microservicio se encuantra la primera historia de usuario que tiene los siguientes criterios de aceptacion</p>
 </div>
   <ol start="numero"> ... </ol>
