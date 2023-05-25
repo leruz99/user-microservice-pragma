@@ -9,16 +9,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class PrincipalUser implements UserDetails {
-    private String nombre;
-    private String nombreUsuario;
+    private String name;
+    private String userName;
     private String email;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
 
-    public PrincipalUser(String nombre, String nombreUsuario, String email, String password,
+    public PrincipalUser(String name, String userName, String email, String password,
                          Collection<? extends GrantedAuthority> authorities) {
-        this.nombre = nombre;
-        this.nombreUsuario = nombreUsuario;
+        this.name = name;
+        this.userName = userName;
         this.email = email;
         this.password = password;
         this.authorities = authorities;
@@ -43,7 +43,7 @@ public class PrincipalUser implements UserDetails {
 
     @Override
     public String getUsername() {
-        return nombreUsuario;
+        return userName;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class PrincipalUser implements UserDetails {
     }
 
     public String getNombre() {
-        return nombre;
+        return name;
     }
 
     public String getEmail() {

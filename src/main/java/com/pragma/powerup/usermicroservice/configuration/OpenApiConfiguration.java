@@ -31,7 +31,7 @@ public class OpenApiConfiguration {
                         .version(Constanst.SWAGGER_VERSION_MESSAGE)
                         .license(new License().name(Constanst.SWAGGER_LICENSE_NAME_MESSAGE).url(Constanst.SWAGGER_LICENSE_URL_MESSAGE))
                         .termsOfService(Constanst.SWAGGER_TERMS_OF_SERVICE_MESSAGE))
-                .components(new Components()
+                        .components(new Components()
                         .addSchemas("Map", mapSchema)
                         .addSchemas("Error", errorSchema));
 

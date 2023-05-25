@@ -51,9 +51,11 @@ public class MainSecurity {
                         .anyRequest().authenticated()
                 )
                 .formLogin().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .sessionManagement().
+                sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                .exceptionHandling().authenticationEntryPoint(jwtEntryPoint);
+                .exceptionHandling().
+                authenticationEntryPoint(jwtEntryPoint);
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
